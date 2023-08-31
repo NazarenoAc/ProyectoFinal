@@ -1,0 +1,18 @@
+
+@mixin borde-redondeado {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+@mixin sombras($tipo) {
+    @if $tipo == "sutil" {
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    } @else if $tipo == "media" {
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    } @else if $tipo == "intensa" {
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    } @else {
+      @error "Tipo de sombra no válido: #{$tipo}";
+    }
+}
+  
